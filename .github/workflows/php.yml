@@ -17,6 +17,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: composer update action
+      # You may pin to the exact commit or the version.
+      # uses: kawax/composer-update-action@a800d2246fbe6a17743e8f8e6ff6b9fcaefcc0bd
+      uses: kawax/composer-update-action@v4.0.0
+          
+
     - name: Validate composer.json and composer.lock
       run: composer validate --strict
 
@@ -31,9 +37,8 @@ jobs:
 
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
-
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
-    # - name: Run test suite
-    #   run: composer run-script test
+    - name: Run test suite
+      run: composer run-script test
