@@ -16,7 +16,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-
+    
+    - name: update composer.lock
+      run: composer update --lock
+    
     - name: Validate composer.json and composer.lock
       run: composer validate --strict
 
