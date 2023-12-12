@@ -1,4 +1,5 @@
 {
+    "name": "SHJordan/api-pncp-php",
     "description": "API REST de serviços do Portal Nacional de Contratações Públicas (PNCP)",
     "keywords": [
         "openapitools",
@@ -30,9 +31,13 @@
         "friendsofphp/php-cs-fixer": "^3.5"
     },
     "autoload": {
-        "psr-4": { "OpenAPI\\Client\\" : "lib/" }
+        "psr-4": {
+            "OpenAPI\\Client\\": "lib/"
+        }
     },
     "autoload-dev": {
-        "psr-4": { "OpenAPI\\Client\\Test\\" : "test/" }
+        "psr-4": {
+            "OpenAPI\\Client\\Test\\": "test/"
+        }
     }
 }
